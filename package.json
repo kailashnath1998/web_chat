@@ -1,0 +1,31 @@
+{
+  "name": "web_chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kailashnath1998/web_chat.git"
+  },
+  "author": "kailashnath1998 , techtocore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kailashnath1998/web_chat/issues"
+  },
+  "homepage": "https://github.com/kailashnath1998/web_chat#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "ip": "^1.1.3",
+    "nodemon": "^1.11.0",
+    "socket.io": "^1.4.8"
+  },
+  "config": {
+    "server": {
+      "port": "8080"
+    }
+  }
+}
