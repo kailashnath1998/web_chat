@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Chat demo</title>
+</head>
+<body>
+  <br/>
+  <br/>
+  <center>
+    <h1>
+      Login page
+    </h1>
+  </center>
+  <div class="panel">
+  <form action="">
+  <input class="un-input" autocomplete="off" />
+  <input class="pw-input" autocomplete="off" />
+  <button>Login</button>
+
+
+  </form>  
+  <ul class="messages"></ul>
+
+  </div>
+</body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+    var socket = io();
+    $('form').submit(function(event) {
+
+        event.preventDefault();
+
+        socket.emit('chat message', $('.message-input').val());
+
+        $('.message-input').val('');
+
+    });
+    socket.on('chat message', function(message) {
+      $('.messages').append($('<li>').text(message));
+    });
+  </script>
+</html>
