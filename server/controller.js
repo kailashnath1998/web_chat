@@ -11,7 +11,7 @@ module.exports = function (app,io){
     }));
     
     app.get('/',function(req,res){
-        res.sendFile(path.resolve(__dirname+"/../views/index.html"));
+        res.sendFile(path.resolve(__dirname+"/../views/login.html"));
     });
     
     app.post('/register',function(req,res){
